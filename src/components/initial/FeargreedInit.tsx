@@ -1,9 +1,9 @@
 import { useCallback, useLayoutEffect } from "react";
-import moment from "moment";
 import { getFearGreed } from "@/api/fearGreed";
 import interval from "@/utils/interval";
-import { useBearStore, bearStore } from "@/store";
+import { bearStore, useBearStore } from "@/store";
 import { isDev } from "@/utils/common";
+import { getCurrentFormatted, getMinuteDifference } from "@/utils/date";
 
 const limitMins = 10; // 분(min)
 const intervalTime = 300000; // Interval Time(ms): 5분
@@ -18,8 +18,10 @@ const FeargreedInit = () => {
 
   // 업데이트 시간 체크해서 업데이트 실행
   const updateCheck = useCallback(() => {
-    const minDiff = Math.floor(moment.duration(moment().diff(fearGreed.date)).asMinutes());
-    if (Number.isNaN(minDiff) || minDiff > limitMins) updateFGIndex(); // 10분 이후면 업데이트
+    const minDiff = getMinuteDifference(fearGreed.date, getCurrentFormatted());
+    if (Number.isNaN(minDiff) || minDiff > limitMins) {
+      updateFGIndex().then(); // 10분 이후면 업데이트
+    }
   }, []);
 
   useLayoutEffect(() => {

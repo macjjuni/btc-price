@@ -28,6 +28,7 @@
     "@mui/material": "^5.13.6",
     "axios": "^1.4.0",
     "chart.js": "^4.4.3",
+    "dayjs": "^1.11.13",
     "firebase": "^9.23.0",
     "firebase-tools": "^12.4.2",
     "framer-motion": "^10.12.18",

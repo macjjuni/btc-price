@@ -1,7 +1,7 @@
 import axios from "axios";
 import { toast } from "react-toastify";
-import moment from "moment";
 import { FearGreedProps } from "@/store/store.interface";
+import { getCurrentDate } from "@/utils/date";
 
 const fearGreedURI = "https://api.alternative.me/fng/";
 
@@ -26,7 +26,7 @@ export const getFearGreed = async (): Promise<FearGreedProps> => {
 
     const ResponseData = {
       value: data.data[0].value,
-      date: moment().format("yyyy.MM.DD HH:mm:ss"),
+      date: getCurrentDate("YYYY.MM.DD HH:mm:ss"),
     };
     return ResponseData;
   } catch (e) {

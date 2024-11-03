@@ -75,10 +75,6 @@ export const getNowDate = () => {
   return moment().format(dateFormat);
 };
 
-export const getDateFormat = () => {
-  return dateFormat;
-};
-
 /* ---------- 김치 프리미엄 퍼센트 계산 ---------- */
 export const calcPerDiff = (krwPrice: number, usdPrice: number, exRate: number) => {
   const basedUsdKRW = Math.floor(usdPrice * exRate); // 환율 * 비트코인 USD 시세
