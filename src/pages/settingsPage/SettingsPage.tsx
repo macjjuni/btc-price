@@ -9,6 +9,7 @@ import { isSafari } from "@/shared/utils/device";
 import { FormRow, InstallSettingForm, ResourceSource } from "@/widgets/pages/settings";
 import "./SettingsPage.scss";
 import AnimationIcon from "@/widgets/icon/AnimationIcon";
+import Frame1 from "@/widgets/frame/frame1/Frame1";
 
 
 export default function SettingsPage() {
@@ -61,6 +62,8 @@ export default function SettingsPage() {
   return (
     <div className="settings-page__area">
       <div className="settings-page__area__form__area">
+
+        <Frame1 />
         <FormRow icon={<KIcon icon="star" color={btcColor} />} label="시작 페이지">
           <KSelect value={initialPath} width="176px" onChange={(path) => {
             setInitialPath(path);
