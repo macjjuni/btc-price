@@ -6,8 +6,12 @@ $gray-font-color: #999999 !default;
 $border-color: #4f4f4f !default;
 
 $default-font-color: #eee !default;
+
 $default-background-color: #000 !default;
 $dark-background-color: #171717 !default;
+
+$cypher-punk-main-color: #05d9e8 !default;
+$cypher-punk-font-color: #d1f7ff !default;
 
 // endregion
 
@@ -61,6 +65,11 @@ $default-font-family: Pretendard, ui-sans-serif, system-ui, -apple-system,
 'Segoe UI Symbol', 'Noto Color Emoji' !default;
 
 $number-font-family: 'Roboto Mono', ui-sans-serif, system-ui, -apple-system,
+'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+'Segoe UI Symbol', 'Noto Color Emoji' !default;
+
+$cypher-punk-font-family: 'SAIBA-45', ui-sans-serif, system-ui, -apple-system,
 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
 'Segoe UI Symbol', 'Noto Color Emoji' !default;
