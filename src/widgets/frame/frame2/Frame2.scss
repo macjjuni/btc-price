@@ -3,16 +3,16 @@
 $full-width: variable.$max-width-size;
 $mobile-full-width: calc(100dvw - (#{variable.$spacing-8} * 2));
 
-.frame-1__area {
+.frame-2__area {
     position: relative;
     max-width: $full-width;
     width: 100%;
     height: 100%;
     max-height: calc(#{$full-width} * (9 / 16)); // 모바일에서 16:9 비율 유지
-    padding: variable.$spacing-56 variable.$spacing-24;
+    padding: variable.$spacing-48 variable.$spacing-48;
     overflow: hidden; // 내용이 넘칠 경우 숨김
 
-    .frame-1__area__svg {
+    .frame-2__area__svg {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -22,18 +22,18 @@ $mobile-full-width: calc(100dvw - (#{variable.$spacing-8} * 2));
         display: block;
     }
 
-    .frame-1__area__content {
+    .frame-2__area__content {
         width: 100%;
         height: 100%;
     }
 }
 
 @media screen and (max-width: variable.$max-width-size) {
-    .frame-1__area {
+    .frame-2__area {
         max-width: $mobile-full-width; // 모바일에서 최대 너비 설정
         width: 100%;
         height: 100%;
         max-height: calc(#{$mobile-full-width} * (9 / 16)); // 모바일에서 16:9 비율 유지
-        padding: variable.$spacing-36 variable.$spacing-24;
+        padding: variable.$spacing-32 variable.$spacing-32;
     }
 }
